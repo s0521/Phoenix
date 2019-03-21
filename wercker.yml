@@ -14,4 +14,4 @@ deploy:
             token: $GITHUB_TOKEN
             domain: s0521.github.io
             basedir: public
-            repo: 0521/username.github.io
+            repo: s0521/s0521.github.io
