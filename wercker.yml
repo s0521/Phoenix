@@ -6,3 +6,12 @@ build:
         theme: hyde
         config: second-config.toml
         flags: --disableKinds=["sitemap"]
+deploy:
+    steps:
+        - install-packages:
+            packages: git ssh-client
+        - lukevivier/gh-pages@0.2.1:
+            token: $GITHUB_TOKEN
+            domain: s0521.github.io
+            basedir: public
+            repo: 0521/username.github.io
