@@ -1,3 +1,62 @@
-﻿baseURL = "http://s0521.github.io/"
-languageCode = "zh-cn"
-title = "这是s0521的个人博客"
+baseURL = "https://s0521.github.io/"
+languageCode = "utf-8"
+footnoteReturnLinkContents = "?"
+title = "Yongchao Fu | 付永超"
+theme = "ivy"
+disqusShortname = "Yongchao"
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+rssLimit = 100
+
+[params]
+  description = "Personal website of Yongchao Fu; 付永超的个人网站"
+  [[params.author]]
+    en = "Yongchao Fu"
+    cn = "付永超"
+  disqusURL = "https://s0521.github.io/"
+  AuthorName = "Yongchao Fu"
+  GitHubUser = "spf13"
+  ListOfFoo = ["foo1", "foo2"]
+  SidebarRecentLimit = 5
+  Subtitle = "这是付永超使用hugo构建的网站"
+  footer = "&copy; [Yongchao Fu](/) 2019 - 2020"
+
+[permalinks]
+  posts = "/:year/:month/:slug/"
+  cn = "/cn/:year/:month/:slug/"
+  en = "/en/:year/:month/:slug/"
+ 
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/en/about/"
+    weight = 1
+	
+  [[menu.main]]
+    name = "Blog"
+    url = "/en/"
+    weight = 2
+    [[menu.main]]
+	  name = "关于"
+      url = "/cn/about/"
+      weight = 3
+    [[menu.main]]
+	  name = "博客"
+      url = "/cn/"
+      weight = 4
+    [[menu.en]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[menu.en]]
+      name = "About"
+      url = "/en/about/"
+      weight = 2
+    [[menu.en]]
+      name = "Blog"
+      url = "/en/"
+      weight = 3
+    [[menu.en]]
+      name = "中文"
+      url = "/cn/"
+      weight = 4
