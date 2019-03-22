@@ -1,25 +1,30 @@
 baseURL = "https://s0521.github.io/"
 languageCode = "utf-8"
-footnoteReturnLinkContents = "?"
 title = "Yongchao Fu | 付永超"
 theme = "ivy"
 disqusShortname = "Yongchao"
 enableEmoji = true
+preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 rssLimit = 100
 
 [params]
   description = "Personal website of Yongchao Fu; 付永超的个人网站"
-  [[params.author]]
-    en = "Yongchao Fu"
-    cn = "付永超"
+  footer = "&copy; [Yongchao Fu](https://s0521.github.io/) 2019 - 2020"
   disqusURL = "https://s0521.github.io/"
   AuthorName = "Yongchao Fu"
-  GitHubUser = "spf13"
+  GitHubUser = "s0521"
   ListOfFoo = ["foo1", "foo2"]
   SidebarRecentLimit = 5
   Subtitle = "这是付永超使用hugo构建的网站"
-  footer = "&copy; [Yongchao Fu](/) 2019 - 2020"
+  [[params.author]]
+    en = "Yongchao Fu"
+    cn = "付永超"
+  [[params.logo]]
+      img = "/images/logo.png"
+      url = "/"
+      alt = "Yongchao Fu"
+      tag = ""
 
 [permalinks]
   posts = "/:year/:month/:slug/"
@@ -31,32 +36,49 @@ rssLimit = 100
     name = "About"
     url = "/en/about/"
     weight = 1
-	
   [[menu.main]]
     name = "Blog"
     url = "/en/"
     weight = 2
-    [[menu.main]]
+  [[menu.main]]
 	  name = "关于"
-      url = "/cn/about/"
-      weight = 3
-    [[menu.main]]
+    url = "/cn/about/"
+    weight = 3
+  [[menu.main]]
 	  name = "博客"
-      url = "/cn/"
-      weight = 4
-    [[menu.en]]
-      name = "Home"
-      url = "/"
-      weight = 1
-    [[menu.en]]
-      name = "About"
-      url = "/en/about/"
-      weight = 2
-    [[menu.en]]
-      name = "Blog"
-      url = "/en/"
-      weight = 3
-    [[menu.en]]
-      name = "中文"
-      url = "/cn/"
-      weight = 4
+    url = "/cn/"
+    weight = 4
+	
+  [[menu.en]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.en]]
+    name = "About"
+    url = "/en/about/"
+    weight = 2
+  [[menu.en]]
+    name = "Blog"
+    url = "/en/"
+    weight = 3
+  [[menu.en]]
+    name = "中文"
+    url = "/cn/"
+    weight = 4
+	
+  [[menu.cn]]
+    name = "主页"
+    url = "/"
+    weight = 1
+  [[menu.cn]]
+    name = "关于"
+    url = "/cn/about/"
+    weight = 2
+  [[menu.cn]]
+    name = "博客"
+    url = "/en/"
+    weight = 3
+  [[menu.cn]]
+    name = "Englih"
+    url = "/cn/"
+    weight = 4
