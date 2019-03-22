@@ -4,8 +4,6 @@ build:
     - arjen/hugo-build:
         version: "0.53"
         theme: ivy
-        config: second-config.toml
-        flags: --disableKinds=["sitemap"]
 deploy:
     steps:
         - install-packages:
