@@ -21,8 +21,14 @@ rssLimit = 100
   logo = {img = "/images/logo.png" , url = "/" , alt = "Yongchao Fu" , tag = ""}
   lang = {edit = {cn = "编辑"}, license ={cn = "版权"}, subscribe = {cn = "订阅"}}
   githubContentURL = "https://github.com/s0521/Phoenix/edit/master/content/"
+  customJS = [ "js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js"]
+  #customJS = {js/fix-toc.js, js/center-img.js, js/right-quote.js, js/no-highlight.js, js/fix-footnote.js, js/math-code.js, js/external-link.js, js/alt-title.js, js/header-link.js }
   
-[permalinks]
+  highlightjsVersion = "9.12.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsLang = ["r", "yaml", "tex"]
+  highlightjsTheme = "github"
+  [permalinks]
   posts = "/:year/:month/:slug/"
   cn = "/cn/:year/:month/:slug/"
   en = "/en/:year/:month/:slug/"
