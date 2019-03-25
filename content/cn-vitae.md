@@ -30,7 +30,7 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 1.3NONMEM培训班：  
 群体药动（效）学和个体化给药培训班讲师（源资与华山医院主办），5场  
 2.客户技术支持：  
-为学校，医院，制药公司，CRO公司和监管机构等四十余家单位进行WinNonlin或NLME的内部培训，并持续的为他们提供技术支持：
+为学校，医院，制药公司，CRO公司和监管机构等数十家单位进行WinNonlin或NLME的内部培训，并持续的为他们提供技术支持：
 
 2. 2013-06 – 2017-04，
 专题负责人助理，上海睿智化学研究有限公司；
@@ -52,8 +52,8 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 - [VPC视觉预测检验图（2）在Phoenix NLME中绘制VPC图](http://www.tri-ibiotech.com.cn/Appofcase/n738.html)
 - [VPC视觉预测检验图（3）在Phoenix中手工绘制VPC图](http://www.tri-ibiotech.com.cn/Appofcase/n796.html)
 - [PML系列（2）：靶点介导的药物处置模型（TMDD）](http://www.tri-ibiotech.com.cn/Appofcase/n700.html)
-- [PML系列（3）:TMDD模型的近似](http://www.tri-ibiotech.com.cn/Appofcase/n707.html)
-- [PML系列（4）——简单的异速缩放](http://www.tri-ibiotech.com.cn/Appofcase/n813.html)
+- [PML系列（3）：TMDD模型的近似](http://www.tri-ibiotech.com.cn/Appofcase/n707.html)
+- [PML系列（4）：简单的异速缩放](http://www.tri-ibiotech.com.cn/Appofcase/n813.html)
 - [PML系列（5）：简单的异速缩放（2）](http://www.tri-ibiotech.com.cn/Appofcase/n840.html)
 - [Phoenix友好的兼容性：Phoenix与R语言的链接](http://www.tri-ibiotech.com.cn/Appofcase/n797.html)
 
