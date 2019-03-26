@@ -2,9 +2,9 @@
 title: "About"
 slug: "en/about"
 ---
-F
+M
 
-my name is Yongchao Fu. You can know more about me on the homepage and my vitae.
+y name is Yongchao Fu. You can know more about me on the homepage and my vitae.
 This blog is about Pharmacokinetics and statistics.
 
 This site is created with Hugo and the theme is hugo-ivy, a Hugo theme that I ported from [Yihui Xie](https://yihui.name).
