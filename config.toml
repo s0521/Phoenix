@@ -89,6 +89,6 @@ rssLimit = 100
     url = "/cn/vitae/"
     weight = 4
   [[menu.cn]]
-    name = "Englih"
+    name = "English"
     url = "/en/"
     weight = 5
