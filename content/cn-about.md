@@ -27,6 +27,6 @@ slug: "cn/about"
 * [Phoenix](https://www.certara.com/software/pkpd-modeling-and-simulation-2/phoenix-8/?ap%5B0%5D=PKPD&ap%5B1%5D=1&ap%5B2%5D=PKPD&ap%5B3%5D=PKPD&ap%5B4%5D=PKPD&ap%5B5%5D=PKPD&ap%5B6%5D=PKPD&ap%5B7%5D=PKPD&UTM_LeadSource=1)
 ：直观、灵活、成熟的药物动力学建模与仿真软件
 * [R语言](https://www.r-project.org/):开源的统计与作图软件（与Excel最大区别在于R是面向专业统计学用户，Excel面向广大不同数学水平的用户）
-* [Excel VBA](https://products.office.com/zh-cn/excel):生命力顽强的一个变成语言，是他把我带入变成世界的
+* [Excel VBA](https://products.office.com/zh-cn/excel):生命力顽强的一个编程语言，是他把我带入编程世界的
 * NONMEM：流行的群体药物代谢动力学建模引擎
 * Pirana：NONMEM的一个图形化界面实现。
