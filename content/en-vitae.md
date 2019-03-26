@@ -33,15 +33,15 @@ I also made some Phoenix cases published on the company's website, such as:
 * how to use Phoenix building the Target-mediated drug disposition models.
 
 # Phoenix case in Chinese
-* Phoenix (WinNonlin NLME IVIVC toolkit) Q&A
-* Interpretation of Phoenix WinNonlin Bioequivalence Results
-* PML Series (1) Mini PBPK Model of Monoclonal Antibody
-* Application PhoenixNLME simulates individual blood concentration
-* VPC visual prediction check (1) conceptual principle
-* VPC visual prediction check (2) draw VPC plot in Phoenix NLME
-* VPC visual prediction check (3) hand-drawn VPC plot in Phoenix
-* PML Series (2): Target-mediated drug disposition Model (TMDD)
-* PML Series (3): Approximation of the TMDD Model
-* PML Series (4): Simple Allometric scaling
-* PML Series (5): Simple Allometric scaling(2)
-* Phoenix Friendly Compatibility: Links to Phoenix and R Languages
+* [Phoenix (WinNonlin NLME IVIVC toolkit) Q&A](http://www.tri-ibiotech.com.cn/Appofcase/n607.html)
+* [Interpretation of Phoenix WinNonlin Bioequivalence Results](http://www.tri-ibiotech.com.cn/Appofcase/n683.html)
+* [PML Series (1) Mini PBPK Model of Monoclonal Antibody](http://www.tri-ibiotech.com.cn/Appofcase/n691.html)
+* [Application PhoenixNLME simulates individual blood concentration](http://www.tri-ibiotech.com.cn/Appofcase/n770.html)
+* [VPC visual prediction check (1) conceptual principle](http://www.tri-ibiotech.com.cn/Appofcase/n737.html)
+* [VPC visual prediction check (2) draw VPC plot in Phoenix NLME](http://www.tri-ibiotech.com.cn/Appofcase/n738.html)
+* [VPC visual prediction check (3) hand-drawn VPC plot in Phoenix](http://www.tri-ibiotech.com.cn/Appofcase/n796.html)
+* [PML Series (2): Target-mediated drug disposition Model (TMDD)](http://www.tri-ibiotech.com.cn/Appofcase/n700.html)
+* [PML Series (3): Approximation of the TMDD Model](http://www.tri-ibiotech.com.cn/Appofcase/n707.html)
+* [PML Series (4): Simple Allometric scaling](http://www.tri-ibiotech.com.cn/Appofcase/n813.html)
+* [PML Series (5): Simple Allometric scaling(2)](http://www.tri-ibiotech.com.cn/Appofcase/n840.html)
+* [Phoenix Friendly Compatibility: Links to Phoenix and R Languages](http://www.tri-ibiotech.com.cn/Appofcase/n797.html)
