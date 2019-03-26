@@ -2,7 +2,11 @@
 title: "About"
 slug: "en/about"
 ---
+My name is Yongchao Fu. You can know more about me on the homepage and my vitae.
+This blog is about Pharmacokinetics and statistics.
 
-#这是我的第一个页面
-这是英文关于页About
-你好！这是付永超于2019年3月11日创建的第一个页面，祝贺下自己！
+
+This site is created with Hugo and the theme is hugo-ivy, a Hugo theme that I ported from Xie YiHui.
+The Markdown source files are hosted on Github.
+When you read the blog posts, you can navigate to the previous post by the left-arrow key or next post by right-arrow.
+Please hit “Edit this page” in the menu if you find any mistakes on the page to propose a correction through Github.
