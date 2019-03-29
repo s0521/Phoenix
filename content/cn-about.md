@@ -30,7 +30,3 @@ slug: "cn/about"
 * [Excel VBA](https://products.office.com/zh-cn/excel):生命力顽强的一个编程语言，是他把我带入编程世界的
 * NONMEM：流行的群体药物代谢动力学建模引擎
 * Pirana：NONMEM的一个图形化界面实现。
-
-# Phoenix简体中文汉化包
-这是我个人制作的Phoenix8.1的简体中文汉化补丁。
-[Phoenix 8.1.0.3530_20190312汉化补丁](https://zixunfuwu-my.sharepoint.cn/:u:/g/personal/fuyongchao_zixunfuwu_partner_onmschina_cn/EX94-_DTpC1NjoYusNnAJaoBSR41tEhcx1Wj6DrOlsgxug?e=5A2oh0)
