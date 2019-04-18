@@ -92,3 +92,6 @@ rssLimit = 100
     name = "English"
     url = "/en/"
     weight = 5
+  [[menu.cn]]
+    name = "捐助"
+    url = "/cn/gift/"
