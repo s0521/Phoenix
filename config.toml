@@ -7,6 +7,7 @@ enableEmoji = true
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 rssLimit = 100
+googleAnalytics = "UA-138584476-1"
 
 [params]
   description = "Personal website of Yongchao Fu; 付永超的个人网站"
