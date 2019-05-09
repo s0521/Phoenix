@@ -56,6 +56,11 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 - [PML系列（4）：简单的异速缩放](http://www.tri-ibiotech.com.cn/Appofcase/n813.html)
 - [PML系列（5）：简单的异速缩放（2）](http://www.tri-ibiotech.com.cn/Appofcase/n840.html)
 - [Phoenix友好的兼容性：Phoenix与R语言的链接](http://www.tri-ibiotech.com.cn/Appofcase/n797.html)
-
+- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（1）](http://www.tri-ibiotech.com.cn/Appofcase/n886.html)
+- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（2）](http://www.tri-ibiotech.com.cn/Appofcase/n887.html)
+- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（3）](http://www.tri-ibiotech.com.cn/Appofcase/n888.html)
+- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（4）](http://www.tri-ibiotech.com.cn/Appofcase/n889.html)
+[comment]: <> ([Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（5）]())
+[comment]: <> (- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（6）]())
 
 
