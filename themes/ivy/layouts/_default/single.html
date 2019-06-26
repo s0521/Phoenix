@@ -2,5 +2,5 @@
 
 {{ if .Params.show_toc }} {{ .TableOfContents }} {{ end }}
 {{ .Content }}
-
+{{ partial "comments.html" . }}
 {{ partial "footer.html" . }}

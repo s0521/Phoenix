@@ -29,6 +29,14 @@ googleAnalytics = "UA-138584476-1"
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml", "tex","vbnet"]
   highlightjsTheme = "github-gist"
+  
+  enableGitalk = true
+[params.gitalk]
+  owner = "s0521"
+  repo = "s0521.github.io"
+  client_id = "8d1421e8a6cfe245f5f2"
+  client_secret = "7b842e02dbc3388b936bdc37373643f6379b9fb2"
+  
   [permalinks]
   posts = "/:year/:month/:slug/"
   cn = "/cn/:year/:month/:slug/"
@@ -96,3 +104,4 @@ googleAnalytics = "UA-138584476-1"
   [[menu.cn]]
     name = "捐助"
     url = "/cn/gift/"
+	
