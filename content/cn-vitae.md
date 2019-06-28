@@ -60,7 +60,5 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 - [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（2）](http://www.tri-ibiotech.com.cn/Appofcase/n887.html)
 - [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（3）](http://www.tri-ibiotech.com.cn/Appofcase/n888.html)
 - [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（4）](http://www.tri-ibiotech.com.cn/Appofcase/n889.html)
-- ([Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（5）](http://www.tri-ibiotech.com.cn/Appofcase/n907.html))
+- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（5）](http://www.tri-ibiotech.com.cn/Appofcase/n907.html)
 [comment]: <> (- [Phoenix系列之Phoenix Model的“输入选项（Input Options）”选项卡（6）]())
-
-
