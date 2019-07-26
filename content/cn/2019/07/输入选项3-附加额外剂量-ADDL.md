@@ -103,7 +103,7 @@ Phoenix Model的“输入选项（Input Options）”选项卡的“4附加额�
 
 > ![img](/images/输入选项3-附加额外剂量-ADDL/clip_image012.jpg)
 
-![img](file:///C:/Users/FUYONG~1/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg)
+![1564116578478](/images/输入选项3-附加额外剂量-ADDL/1564116578478.png)
 
  
 
@@ -113,7 +113,7 @@ Phoenix Model的“输入选项（Input Options）”选项卡的“4附加额�
 
 > ![img](/images/输入选项3-附加额外剂量-ADDL/clip_image016.jpg)
 
-![img](file:///C:/Users/FUYONG~1/AppData/Local/Temp/msohtmlclip1/01/clip_image017.jpg)
+![1564116491746](/images/输入选项3-附加额外剂量-ADDL/1564116491746.png)
 
  
 

@@ -102,7 +102,7 @@ Phoenix Model的“输入选项（Input Options）”选项卡的“稳态(SS，
 
 ![img](/images/输入选项4-稳态-SS/clip_image007.jpg)
 
-![img](file:///C:/Users/FUYONG~1/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg)
+![1564116379504](/images/输入选项4-稳态-SS/1564116379504.png)
 
  
 
@@ -110,9 +110,7 @@ Phoenix Model的“输入选项（Input Options）”选项卡的“稳态(SS，
 
 ![img](/images/输入选项4-稳态-SS/clip_image011.jpg)
 
- 
-
-![[img](/images/输入选项4-稳态-SS/clip_image013.jpg)](file:///C:/Users/FUYONG~1/AppData/Local/Temp/msohtmlclip1/01/clip_image013.jpg)
+ ![1564116393005](/images/输入选项4-稳态-SS/1564116393005.png)
 
  
 
