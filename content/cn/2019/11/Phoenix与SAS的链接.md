@@ -130,37 +130,21 @@ C:\Program Files (x86)\Certara\Phoenix\application\Examples\SAS\Example1
 
 ## 4.2 SAS代码：
 
-```R
+```sas
 /* CLEAR LOG AND OUTPUT WINDOWS */
-
 dm 'log; clear; output; clear;';
-
- 
 
 libname indata XPORT "Final Parameters.xpt"; /*WNL_IN Subject Time Concen*/
 
- 
-
 proc copy in=indata out=Work;
-
 run;
-
- 
 
 data finpar;
-
 set Final_Pa;
-
 run;
 
- 
-
 libname outdata XPORT "aucdescrp.xpt";
-
- 
-
 proc copy in=work out=outdata;
-
 select finpar;
 
 run;
