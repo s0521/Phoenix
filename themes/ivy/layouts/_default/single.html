@@ -4,4 +4,3 @@
 {{ (replaceRE "<!--\\s*[t|T][o|O][c|C]\\s*-->" .TableOfContents .Content) | safeHTML }}
 {{ .Content }}
 {{ partial "footer.html" . }}
-#博客文章正文页面的模板
