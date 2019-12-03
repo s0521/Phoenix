@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ if .Params.show_toc }} {{ .TableOfContents }} {{ end }}
-{{ .Content }}
+
+{{(replaceRE "<!--\\s*[t|T][o|O][c|C]\\s*-->" .TableOfContents .Content)| safeHTML}}
+
 {{ partial "footer.html" . }}

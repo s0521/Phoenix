@@ -20,7 +20,7 @@ typora-root-url: ../../../../static/
 
 使用“二级参数（Secondary）”语句定义AUC，例如secondary(AUC=A1Dose/Cl)，然后在“结果（Results）”子标签页下的“Secondary”工作表中查看该参数的值。
 
-```
+```r
 test(){
 deriv(A1 = - (Cl * C)- (Cl2 * (C - C2)))
 urinecpt(A0 = (Cl * C))
@@ -34,6 +34,7 @@ stparm(V = tvV)
 stparm(Cl = tvCl)
 stparm(V2 = tvV2)
 stparm(Cl2 = tvCl2)
+#int
 fixef(tvV = c(, 55, ))
 fixef(tvCl = c(, 0.37, ))
 fixef(tvV2 = c(, 55, ))
@@ -48,26 +49,27 @@ secondary(AUC = A1Dose/Cl)
 
 直接在模型中定义参数的计算公式，例如AUC=A1Dose/Cl，然后再“运行选项（Run Options）”选项卡下增加自定义报表（如果是模拟模式，则可以直接在模型报表中指定该参数），在其中定义输出AUC这个“变量（Varirables）”，最后就可以在“结果（Results）”子标签页下的“Table01”工作表中查看到该参数的值。
 
-```
+```R
 test(){
-deriv(A1 = - (Cl * C)- (Cl2 * (C - C2)))
-urinecpt(A0 = (Cl * C))
-deriv(A2 = (Cl2 * (C - C2)))
-C = A1 / V
-dosepoint(A1, idosevar = A1Dose, infdosevar = A1InfDose, infratevar = A1InfRate)
-C2 = A2 / V2
-AUC = A1Dose/Cl
-error(CEps = 0.136218)
-observe(CObs = C + CEps)
-stparm(V = tvV)
-stparm(Cl = tvCl)
-stparm(V2 = tvV2)
-stparm(Cl2 = tvCl2)
-fixef(tvV = c(, 55, ))
-fixef(tvCl = c(, 0.37, ))
-fixef(tvV2 = c(, 55, ))
-fixef(tvCl2 = c(, 1, ))
- 
+#PK
+    deriv(A1 = - (Cl * C)- (Cl2 * (C - C2)))
+    urinecpt(A0 = (Cl * C))
+    deriv(A2 = (Cl2 * (C - C2)))
+    C = A1 / V
+    dosepoint(A1, idosevar = A1Dose, infdosevar = A1InfDose, infratevar = A1InfRate)
+    C2 = A2 / V2
+    AUC = A1Dose/Cl
+#Observe
+    error(CEps = 0.136218)
+    observe(CObs = C + CEps)
+    stparm(V = tvV)
+    stparm(Cl = tvCl)
+    stparm(V2 = tvV2)
+    stparm(Cl2 = tvCl2)
+    fixef(tvV = c(, 55, ))
+    fixef(tvCl = c(, 0.37, ))
+    fixef(tvV2 = c(, 55, ))
+    fixef(tvCl2 = c(, 1, ))
 }
 ```
 
@@ -99,7 +101,7 @@ fixef(tvCl2 = c(, 1, ))
 
 在模型中写入计算AUC的微分方程，例如deriv(AUC = C)，然后再“运行选项（Run Options）”选项卡下增加自定义报表（如果是模拟模型，则可以直接在模型报表中指定该参数），在其中定义输出AUC这个“变量（Varirables）”并在“Times”中指定需要报告AUC的时间，最后就可以在“结果（Results）”子标签页下的“Table01”工作表中查看到该参数的值。
 
-```
+```R
 test(){
 deriv(A1 = - (Cl * C)- (Cl2 * (C - C2)))
 urinecpt(A0 = (Cl * C))
