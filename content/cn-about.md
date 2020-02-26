@@ -1,11 +1,11 @@
-﻿---
+---
 title: "关于"
 slug: "cn/about"
 ---
 
 # 我是谁
 一个在上海工作的河南许昌人，喜欢踢足球，正在学习码代码，
-大部分时间在阅读与学习药物代谢动力学知识，和统计学知识。
+大部分时间在阅读与学习药物代谢动力学知识和统计学知识。
 除了跑模型与算均值方差，并无太业余多爱好。
 
 # 本站架构
@@ -24,9 +24,8 @@ slug: "cn/about"
 1. 若要全篇转载，请遵守 [CC 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)，请把转载后的页面做的工整漂亮。
 
 # 软件
-* [Phoenix](https://www.certara.com/software/pkpd-modeling-and-simulation-2/phoenix-8/?ap%5B0%5D=PKPD&ap%5B1%5D=1&ap%5B2%5D=PKPD&ap%5B3%5D=PKPD&ap%5B4%5D=PKPD&ap%5B5%5D=PKPD&ap%5B6%5D=PKPD&ap%5B7%5D=PKPD&UTM_LeadSource=1)
-：直观、灵活、成熟的药物动力学建模与仿真软件
+* [Phoenix](https://www.certara.com/software/pkpd-modeling-and-simulation-2/phoenix-8/?ap%5B0%5D=PKPD&ap%5B1%5D=1&ap%5B2%5D=PKPD&ap%5B3%5D=PKPD&ap%5B4%5D=PKPD&ap%5B5%5D=PKPD&ap%5B6%5D=PKPD&ap%5B7%5D=PKPD&UTM_LeadSource=1)：直观、灵活、成熟的药物动力学建模与仿真软件
 * [R语言](https://www.r-project.org/):开源的统计与作图软件（与Excel最大区别在于R是面向专业统计学用户，Excel面向广大不同数学水平的用户）
 * [Excel VBA](https://products.office.com/zh-cn/excel):生命力顽强的一个编程语言，是他把我带入编程世界的
-* NONMEM：流行的群体药物代谢动力学建模引擎
-* Pirana：NONMEM的一个图形化界面实现。
+* [NONMEM](https://www.iconplc.com/innovation/nonmem/)：流行的群体药物代谢动力学建模引擎
+* [Pirana](http://www.tri-ibiotech.com.cn/pkpd/product_112.html)：NONMEM的一个图形化界面实现。
