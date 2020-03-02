@@ -12,7 +12,7 @@ Phoenix WinNonlin / Phoenix NLME / Phoenix IVIVC等Phoenix系列软件是专为�
 
  
 
-**当然是有的**，Phoenix作为一个完整的解决方案平台，拥有友好的兼容性，可以把R、SAS、NONMEM、SigmaPlot等第三方分析工具无缝的集成至Phoenix平台，是我们可以像使用Phoenix本身的一些分析工具一样使用它们。
+**当然是有的**，Phoenix作为一个完整的解决方案平台，拥有友好的兼容性，可以把R、SAS、NONMEM、SigmaPlot等第三方分析工具无缝的集成至Phoenix平台，使我们可以像使用Phoenix本身的一些分析工具一样使用它们。
 
  
 
@@ -94,13 +94,13 @@ Phoenix WinNonlin / Phoenix NLME / Phoenix IVIVC等Phoenix系列软件是专为�
 
 ## 2.7.执行
 
-点击执行按钮，执行“NONMEM”操作对象，执行过程中可以看到一闪而过的调用“R语言”产生的日志窗口。
+点击执行按钮，执行“NONMEM”操作对象，执行过程中可以看到一闪而过的调用“NONMEM”产生的日志窗口。
 
 ![image-20200226115358993](/images/Phoenix与NONMEM的链接/image-20200226115358993.png)
 
 ## 2.8.结果，
 
-在结果子标签中，我们可以看到一列的结果：附加结果、数据结果、图表结果、文本结果。
+在结果子标签中，我们可以看到一系列的结果：附加结果、数据结果、图表结果、文本结果。
 
 ![image-20200226115405012](/images/Phoenix与NONMEM的链接/image-20200226115405012.png)
 
@@ -192,7 +192,7 @@ $SCAT      PRED VS CP
 
  
 
-到此本案例就结束了，通过该案例我们可以发现，在Phoenix中调用NONMEM非常的方便，可以提高NONMEM代码的可重用性，完善NONMEM的稽查轨迹，这是Phoenix强大的易用的一种体现。
+到此本案例就结束了，通过该案例我们可以发现，在Phoenix中调用NONMEM非常的方便，可以提高NONMEM代码的可重用性，完善NONMEM的稽查轨迹，这是Phoenix强大且易用的一种体现。
 
  
 
