@@ -40,10 +40,20 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 2.担任动物实验技术员期间：  
 主要进行比格犬，食蟹猴，巴马猪的体内药代动力学研究，并完成比格犬空肠造瘘手术模型，食蟹猴胆管插管手术模型，比格犬和食蟹猴的脑脊液插管模型。
 
-## 技能
+# 软件作品
+
+## R语言程序包：
+
+我创建并维护的：
+
+- [guiplot](/guiplot/about/), 一个R语言的程序包
+
+# 技能
+
 掌握Phoenix WinNonlin，Phoenix NLME，Phoenix IVIVC，R，SAS，NONMEM，Excel VBA等软件的使用。
 
-#### Phoenix案例
+# Phoenix案例
+
 - [Phoenix （WinNonlin NLME IVIVC toolkit）问答集锦](http://www.tri-ibiotech.com.cn/Appofcase/n607.html)
 - [Phoenix WinNonlin生物等效性结果解读](http://www.tri-ibiotech.com.cn/Appofcase/n683.html)
 - [PML系列（1）单克隆抗体的迷你生理药代动力学模型](http://www.tri-ibiotech.com.cn/Appofcase/n691.html)
@@ -63,4 +73,3 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 - [Phoenix Model的“输入选项（Input Options）”选项卡（5）Steady State](http://www.tri-ibiotech.com.cn/Appofcase/n907.html)
 
 - [Phoenix Model的“输入选项（Input Options）”选项卡（6）Reset](http://www.tri-ibiotech.com/Appofcase/n912.html)
-

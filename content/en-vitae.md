@@ -1,4 +1,4 @@
-﻿---
+---
 title: "关于"
 slug: "en/vitae"
 ---
@@ -21,7 +21,9 @@ Pharmacokinetics, pharmacodynamics, modeling and simulation, nonlinear mixed-eff
 2010~2013, College degree,Biopharmaceutical, Henan University of Animal Husbandry and Economics
 
 # Professional Experience
-I join Tri-ibiotech as an  application engineer for Phoenix, and provide technical support and training services for users across the country.  
+2013-2017, I join Chempartner as a Study Director Assistant, responsible for pre-clinical in vivo pharmacokinetics research in the DMPK department, including study protocol writing, study data analysis, study report writing, etc.
+
+2017, I join Tri-ibiotech as an application engineer for Phoenix, and provide technical support and training services for users across the country.  
 
 * I hosted 11 WinNonlin workshops as the only lecturer, 
 * organized 2 NLME workshop with others,
@@ -36,6 +38,14 @@ I also made some Phoenix cases published on the company's website, such as:
 * how to use Phoenix to generate VPC Plot,
 * how to use Phoenix for allometric scaling,
 * how to use Phoenix building the Target-mediated drug disposition models.
+
+# Software Packages
+
+## R packages:
+
+I’m the creator and main author of:
+
+- [guiplot](/guiplot/about/):a user-friendly plotting aids based on graphical interface in R
 
 # Phoenix case in Chinese
 * [Phoenix (WinNonlin NLME IVIVC toolkit) Q&A](http://www.tri-ibiotech.com.cn/Appofcase/n607.html)
