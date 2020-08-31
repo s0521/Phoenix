@@ -76,70 +76,92 @@ typora-root-url: ../../../../static/
 
 ```r
 test(){
-#A
-deriv(A1 = - (VMax * C / (C + Km)) + (Aa * Ka))
-urinecpt(A0 = (VMax * C / (C + Km)))
-deriv(Aa = - (Aa * Ka))
-C = A1 / V
- 
-#LPS
-deriv(A_LPS = - (A_LPS * K_LPS))
-urinecpt(A0_LPS = (A_LPS * K_LPS))
-deriv(s1 = ks *((A_LPS / (Km_LPS + A_LPS)-s1)))
-deriv(s2 = ks * (s1-s2))
-deriv(s3 = ks * (s2-s3))
- 
-#TNF-a
-deriv(R = (Rt-R)*kt-R*Kout+R_in)
-R_in = E_s3*I_Cp
-E_s3 = (Smax * s3^Gam / (SC50^Gam + s3^Gam))
-I_Cp = 1 - (Imax * C) / (IC50 + C)
-deriv(Rt = (R-Rt)*kt)
- 
-#Dose
-dosepoint(Aa)
-dosepoint(A_LPS,tlag = 2)
-#dosepoint(R)
-#sequence{R = 0}
- 
-#Obs
-observe(CObs = C + CEps)
-error(CEps = 1)
- 
-observe(A_LPSObs = A_LPS + A_LPSEps)
-error(A_LPSEps = 1)
- 
-observe(RObs = R + REps)
-error(REps = 1)
- 
-#Initial
-V=3.3
-VMax=32.2
-Km=18.2
-Ka=1.72
-K_LPS=8.36
-SC50=0.469
-Smax=600000
-Gam=3.79
-IC50=0.0231
-Imax=0.675
-Kout=5.65
-Km_LPS=0.0789
-ks=3.28
-kt=0.419
+	#A
+	deriv(A1 = - (VMax * C / (C + Km)) + (Aa * Ka))
+	urinecpt(A0 = (VMax * C / (C + Km)))
+	deriv(Aa = - (Aa * Ka))
+	C = A1 / V
+	
+	#LPS
+	deriv(A_LPS = - (A_LPS * K_LPS))
+	urinecpt(A0_LPS = (A_LPS * K_LPS))
+	deriv(s1 = ks *((A_LPS / (Km_LPS + A_LPS))-s1))
+	deriv(s2 = ks * (s1-s2))
+	deriv(s3 = ks * (s2-s3))
+	
+	#TNF-a
+	deriv(R = E_s3*I_Cp -R*Kout +(Rt-R)*kt)
+	E_s3 = (Smax * s3^Gam / (SC50^Gam + s3^Gam))
+	I_Cp = 1 - (Imax * C) / (IC50 + C)
+	deriv(Rt = (R-Rt)*kt)
+	
+	#Dose
+	dosepoint(Aa)
+	dosepoint(A_LPS,tlag = 2)
+	#dosepoint(R)
+	#sequence{R = 0}
+	
+	#Obs
+	observe(CObs = C + CEps)
+	error(CEps = 1)
+	
+	observe(A_LPSObs = A_LPS + A_LPSEps)
+	error(A_LPSEps = 1)
+	
+	observe(RObs = R + REps)
+	error(REps = 1)
+	
+	#Initial
+	#A
+	V=3.3
+	VMax=32.2
+	Km=18.2
+	Ka=1.72
+	
+	#LPS
+	K_LPS=8.36
+	ks=3.28
+	Km_LPS=0.0789
+	
+	#TNF
+	Smax=6*10^(5)
+	SC50=0.469
+	Gam=3.79
+	
+	Imax=0.675
+	IC50=0.0231
+
+	Kout=5.65
+	kt=0.419
 }
 ```
 
- 
+# 给药方案
+
+![image-20200831212145556](/images/LPS诱导的TNF_a模型及其抑制剂/image-20200831212145556.png)
 
 # 结果：
 
-案例中6中情况下化合物A与TNF-α模拟得到的结果
+对文献中提出的场景进行模拟重现，结果如下，
 
-![img](/images/LPS诱导的TNF_a模型及其抑制剂/clip_image005-1573148209321.png)
+## 本文所得结果：
 
- 
+上排：不同LPS剂量（3、30、300 µg·kg-1）所产生的TNFα反应对时间图(给与测试化合物后的时间)，实线为同时给予3 mg·kg-1测试化合物，虚线为同时不给予测试化合物。
 
-案例中所对应的6个组的TNF-α模拟的结果
+下排：固定的LPS剂量（30μg·kg-1）所产生的TNFα反应对时间图(给与测试化合物后的时间)，实线为同时给予0.03、0.3和3.0 mg·kg-1测试化合物，虚线为同时不给予测试化合物。
 
-![计算机生成了可选文字: YVarName=R 80 60 40 20 一20 IVAR DVvsIVAR](/images/LPS诱导的TNF_a模型及其抑制剂/clip_image006-1573148209321.png) 
+![image-20200831212205329](/images/LPS诱导的TNF_a模型及其抑制剂/image-20200831212205329.png)
+
+![image-20200831212213598](/images/LPS诱导的TNF_a模型及其抑制剂/image-20200831212213598.png)
+
+## 文献原文中的结果：
+
+上排：不同LPS剂量（3、30、300 µg·kg-1）所产生的TNFα反应对时间图(给与LPS后的时间)，实线为同时给予3 mg·kg-1测试化合物，虚线为同时不给予测试化合物。
+
+下排：固定的LPS剂量（30μg·kg-1）所产生的TNFα反应对时间图(给与LPS后的时间)，实线为同时给予0.03、0.3和3.0 mg·kg-1测试化合物，虚线为同时不给予测试化合物。
+
+![image-20200831212243721](/images/LPS诱导的TNF_a模型及其抑制剂/image-20200831212243721.png)
+
+## 差异：
+
+可以看到，本文得到的结果总体趋势与曲线形状与文献报道的一致，但峰值相对文献偏低，原因未知。 
