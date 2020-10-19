@@ -99,7 +99,7 @@ typora-root-url: ../../../../static/
 
 ### 方程：
 
-![img](/images/PML（6）轻松构建多种模型拟合S型曲线/clip_image010.png)
+![img](/images/PML（6）轻松构建多种模型拟合S型曲线/pkpd20201015.png)
 
 ### 4个参数：
 
