@@ -5,7 +5,7 @@ draft: false
 typora-root-url: ..\..\static
 ---
 
-This extension implements basic language features of NONMEM for [Visual Studio Code](https://code.visualstudio.com/).
+This extension implements basic **language features** of **NONMEM** for [Visual Studio Code](https://code.visualstudio.com/).
 
 这个扩展在[Visual Studio Code](https://code.visualstudio.com/)实现了**NONMEM**的一些基础的**语言功能**。
 
