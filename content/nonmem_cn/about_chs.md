@@ -1,33 +1,36 @@
 ---
-title: "About 'guiplot' R Language Package"
-date: 2020-04-07T10:45:14+08:00
+title: "Visual Studio Code的nonmem-cn扩展"
+date: 2021-02-18T16:40:14+08:00
 draft: false
 typora-root-url: ..\..\static
 ---
 
-<!--toc-->
-
-# Visual Studio Code的nonmem-cn扩展
-
 这个扩展在[Visual Studio Code](https://code.visualstudio.com/)实现了NONMEM的一些基础的语言功能。
 
-[英文](/nonmem_cn/nonmem_cn.en)|中文
+**语言**
 
-## 功能
+**[英文](/nonmem_cn/about)|中文**
 
-语法高亮
+# 目录
 
-![](/../static/images/nonmem_cn/Highlight.png)
+<!--toc-->
 
-自动补全(片段)
+# 功能
 
-![](/../static/images/nonmem_cn/snippets.gif)
-
-代码块折叠
-
-![](/../static/images/nonmem_cn/Folding.gif)
+- 语法高亮
 
 
+![](/images/nonmem_cn/Highlight.png)
+
+- 自动补全(片段)
+
+
+![](/images/nonmem_cn/snippets.gif)
+
+- 代码块折叠
+
+
+![](/images/nonmem_cn/Folding.gif)
 
 ## 扩展设置
 
@@ -41,13 +44,12 @@ typora-root-url: ..\..\static
 
 ## 未来计划功能
 
-代码大纲Outline
+- 代码大纲 Outline
 
-悬停提示Hover
+- 悬停提示 Hover
 
------------------------------------------------------------------------------------------------------------
 
-## 目的
+# 目的
 
 目前NONMEM控制文件编写的语法辅助工具都太弱了，没有提供给用户一个好的上手环境，而且也没有提供中文注释说明的工具，所以开发了此工具，为社区做出一些贡献，让大家有更好的工具可供供使用。
 

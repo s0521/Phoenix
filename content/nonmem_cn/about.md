@@ -1,22 +1,36 @@
-# nonmem-cn Extension for Visual Studio Code
+---
+title: "nonmem-cn Extension for Visual Studio Code"
+date: 2021-02-18T16:40:14+08:00
+draft: false
+typora-root-url: ..\..\static
+---
 
 This extension implements basic language features of NONMEM for [Visual Studio Code](https://code.visualstudio.com/).
 
-English|[Simplified Chinese](/nonmem_cn/nonmem_cn.chs)
+**Language**
 
-## Features
+**English|[Simplified Chinese](/nonmem_cn/about_chs)**
 
-Syntax highlighting.
+# Content
 
-![](../../static/images/nonmem_cn/Highlight.png)
+<!--toc-->
 
-Completion (snippets)
+# Features
 
-![](../../static/images/nonmem_cn/snippets.gif)
+- Syntax highlighting.
 
-Code block folding
 
-![](../../static/images/nonmem_cn/Folding.gif)
+![](/images/nonmem_cn/Highlight.png)
+
+- Completion (snippets)
+
+
+![](/images/nonmem_cn/snippets.gif)
+
+- Code block folding
+
+
+![](/images/nonmem_cn/Folding.gif)
 
 ## Extension Settings
 
@@ -28,11 +42,12 @@ Search for editor.snippetSuggestions in the settings, there are four options top
 
 It is recommended that the ordering of completed content is not very appropriate, and it takes a lot of time to modify the sorting. So is temporarily abandoned for the time being.
 
-# Future Planning feature
+## Future Planning feature
 
-Outline
+- Outline
 
-Hover
+- Hover
+
 
 # Purpose
 
