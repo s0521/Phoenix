@@ -53,17 +53,16 @@ CAR-T疗法，描述CAR-T的难点，与传统PK模型的区别
 | 口服小分子或静脉注射CAR-T细胞剂量后的动力学方程 | A*EXP(-α*t)+B*EXP(-β*t)-(A+B) *EXP(-Ka*t) | ![img](/images/CAR-T的细胞动力学模型/clip_image004.jpg) |
 | 给药后初始增加的指数符号                        | 负(-ka)                                   | 正(+ρ)                                                  |
 
- 
-
 # 文献所提及的模型
 
-l 模型1：基础模型（一种描述所观察到的曲线特征的经验模型）
+- 模型1：基础模型（一种描述所观察到的曲线特征的经验模型）
 
-l 模型2：一种半机制的模型（能过够解释曲线特征的一种半机制模型，有多种学术都能够解释这种曲线特征，此处仅是举例）
+- 模型2：一种半机制的模型（能过够解释曲线特征的一种半机制模型，有多种学术都能够解释这种曲线特征，此处仅是举例）
 
-l 模型3：重新参数化的基础模型（文献并无直接展示，但其实隐含了这一模型，该模型在基础模型之上通过半机制模型对原有参数进行了重新参数化）
+- 模型3：重新参数化的基础模型（文献并无直接展示，但其实隐含了这一模型，该模型在基础模型之上通过半机制模型对原有参数进行了重新参数化）
 
-l 模型4：最终模型（在重新参数化的基础模型之上引入协变量）
+- 模型4：最终模型（在重新参数化的基础模型之上引入协变量）
+
 
 # 几个模型之间的演化关系
 
@@ -109,67 +108,46 @@ l 模型4：最终模型（在重新参数化的基础模型之上引入协变�
 
 ## PML代码
 
+```R
 test(){
+     covariate(tt)
 
-​     covariate(tt)
+     E=(
+          (tt<Tmax)?
+              Ro*exp(p*tt)
+          :
+              A*exp(-Alpha*(tt-Tmax))+B*exp(-Beta*(tt-Tmax))
+     )
 
-​     E=(
-
-​          (tt<Tmax)?
-
-​              Ro*exp(p*tt)
-
-​          :
-
-​              A*exp(-Alpha*(tt-Tmax))+B*exp(-Beta*(tt-Tmax))
-
-​     )
-
-​     error(EEps = 2.66295001310029)
-
-​     observe(EObs(tt) = E + EEps)
-
+     error(EEps = 2.66295001310029)
+     observe(EObs(tt) = E + EEps)
  
-
 stparm(Tmax=tvTmax)
-
 stparm(Ro=tvRo)
-
 stparm(p=tvp)
-
 stparm(A=tvA)
-
 stparm(Alpha=tvAlpha)
-
 stparm(B=tvB)
-
 stparm(Beta=tvBeta)
 
- 
-
 fixef(tvTmax=c(,19.8649961319143,))
-
 fixef(tvRo=c(,6.43092405192262,))
-
 fixef(tvp=c(,0.0421269627420855,))
-
 fixef(tvA=c(,1.73947096587749,))
-
 fixef(tvAlpha=c(,0.109143920526125,))
-
 fixef(tvB=c(,9.05116731581526,))
-
 fixef(tvBeta=c(,0.002539845458873,))
-
 }
+```
 
 ### 其中：
 
-F(t)，随时间变化的细胞在体内的数量
+- F(t)，随时间变化的细胞在体内的数量
 
-R0，0时刻体内可用于扩张/增值的细胞的数量
+- R0，0时刻体内可用于扩张/增值的细胞的数量
 
-p，从0时刻至Tmax时刻，细胞在体内的扩张的1级速率常数
+- p，从0时刻至Tmax时刻，细胞在体内的扩张的1级速率常数
+
 
 Tmax后曲线呈双指数函数特征，即类似于血管内给药二房室模型宏观参数化，由此易知：
 
@@ -179,15 +157,16 @@ A+B=Cmax
 
 所以，
 
-A，快速下降过程的截距
+- A，快速下降过程的截距
 
-B，慢速下降过程的截距
+- B，慢速下降过程的截距
 
-Alpha，快速下降过程的速率
+- Alpha，快速下降过程的速率
 
-Beta，慢速下降过程的速率
+- Beta，慢速下降过程的速率
 
-EEps，残差变异的方差
+- EEps，残差变异的方差
+
 
 ## 注意事项
 
@@ -213,25 +192,26 @@ EEps，残差变异的方差
 
 ### 其中：
 
-E+M，随时间变化的细胞在体内的总数量
+- E+M，随时间变化的细胞在体内的总数量
 
-E，细胞中发生效用的细胞的量
+- E，细胞中发生效用的细胞的量
 
-M，细胞中用于记忆的细胞的量
+- M，细胞中用于记忆的细胞的量
 
-p，从0时刻至Tmax时刻，细胞在体内的扩张的1级速率常数
+- p，从0时刻至Tmax时刻，细胞在体内的扩张的1级速率常数
 
-Alpha，快速下降过程的速率
+- Alpha，快速下降过程的速率
 
-Beta，慢速下降过程的速率
+- Beta，慢速下降过程的速率
 
-k，效用细胞转化为记忆细胞的一级速率常数
+- k，效用细胞转化为记忆细胞的一级速率常数
 
-E0，0时刻体内可用于扩张/增值的细胞的数量（基础模型中称之为R0）
+- E0，0时刻体内可用于扩张/增值的细胞的数量（基础模型中称之为R0）
 
-Cmax，Tmax时刻细胞在体内的总量
+- Cmax，Tmax时刻细胞在体内的总量
 
-Fold_x，折叠系数
+- Fold_x，折叠系数
+
 
 ### Fold_x、p、Cmax、Tmax间的关系：
 
@@ -273,85 +253,47 @@ Fold_x，折叠系数
 
 ![img](/images/CAR-T的细胞动力学模型/clip_image046.png)
 
- 
-
 ## PML代码
 
+```R
 test(){
-
- 
-
 deriv(E=t<Tmax?p*1*E:-Alpha*E)
-
 deriv(M=t<Tmax?0:k*E-Beta*M)
-
  
-
 p=log(fold_x)/Tmax
-
 k=F_b*(Alpha-Beta)
 
- 
-
 sequence{
-
-​     E=Cmax/fold_x;
-
+     E=Cmax/fold_x;
 sleep(Tmax);
-
-​     E=Cmax
-
-​     M=0
-
+     E=Cmax
+     M=0
 }
-
- 
 
 error(EEps = 1)
-
 observe(EObs = E + EEps)
 
- 
-
 stparm(Tmax=tvTmax*exp(nTmax))
-
 stparm(Cmax=tvCmax*exp(nCmax))
-
 stparm(fold_x=tvfold_x*exp(nfold_x))
-
 stparm(Alpha=tvAlpha*exp(nAlpha))
-
 stparm(Beta=tvBeta*exp(nBeta))
-
 stparm(F_b=tvF_b*exp(nF_b))
 
- 
-
 fixef(tvTmax=c(,9.3,))
-
 fixef(tvCmax=c(,24000,))
-
 fixef(tvfold_x=c(,3900,))
-
 fixef(tvAlpha=c(,0.16,))
-
 fixef(tvBeta=c(,0.0032,))
-
 fixef(tvF_b=c(,0.0079,))
 
- 
-
 ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nF_b)=c(1,1,1,1,1,1))
-
 }
+```
 
 ## 注意事项
 
 文献未报告参数估计值
-
-## VPC图
-
-暂无
 
 # 模型3
 
@@ -363,77 +305,46 @@ ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nF_b)=c(1,1,1,1,1,1))
 
 ### PML代码
 
+```R
 test(){
+     covariate(tt)
+     
+     rho=log(fold_x)/Tmax
 
-​     covariate(tt)
+     Ro=Cmax/exp(rho*Tmax)
+     AA=(1-FB)*Cmax
 
-​     
+     BB=FB*Cmax
 
-​     rho=log(fold_x)/Tmax
+     E=
+     tt<0?
+          Ro:
+     tt<Tmax?
+          Ro*exp(rho*tt):
+     AA*exp(-Alpha*(tt-Tmax))+BB*exp(-Beta*(tt-Tmax))
 
-​     Ro=Cmax/exp(rho*Tmax)
+     logE=log(E)
 
-​     AA=(1-FB)*Cmax
+     error(EEps = 0.56)
+     observe(EObs(tt)=logE*(1+EEps))
 
-​     BB=FB*Cmax
+     stparm(Tmax=tvTmax*exp(nTmax))
+     stparm(Cmax=tvCmax*exp(nCmax))
+     stparm(fold_x=tvfold_x*exp(nfold_x))
+     stparm(Alpha=tvAlpha*exp(nAlpha))
+     stparm(Beta=tvBeta*exp(nBeta))
+     stparm(FB=tvFB*exp(nFB))
 
-​     
+     fixef(tvTmax=c(,9.3,))
+     fixef(tvCmax=c(,24000,))
+     fixef(tvfold_x=c(,3900,))
+     fixef(tvAlpha=c(,0.16,))
+     fixef(tvBeta=c(,0.0032,))
+     fixef(tvFB=c(,0.0079,))
 
-​     E=
-
-​     tt<0?
-
-​          Ro:
-
-​     tt<Tmax?
-
-​          Ro*exp(rho*tt):
-
-​     AA*exp(-Alpha*(tt-Tmax))+BB*exp(-Beta*(tt-Tmax))
-
-​     
-
-​     logE=log(E)
-
-​     error(EEps = 0.56)
-
-​     observe(EObs(tt)=logE*(1+EEps))
-
- 
-
-​     stparm(Tmax=tvTmax*exp(nTmax))
-
-​     stparm(Cmax=tvCmax*exp(nCmax))
-
-​     stparm(fold_x=tvfold_x*exp(nfold_x))
-
-​     stparm(Alpha=tvAlpha*exp(nAlpha))
-
-​     stparm(Beta=tvBeta*exp(nBeta))
-
-​     stparm(FB=tvFB*exp(nFB))
-
- 
-
-​     fixef(tvTmax=c(,9.3,))
-
-​     fixef(tvCmax=c(,24000,))
-
-​     fixef(tvfold_x=c(,3900,))
-
-​     fixef(tvAlpha=c(,0.16,))
-
-​     fixef(tvBeta=c(,0.0032,))
-
-​     fixef(tvFB=c(,0.0079,))
-
- 
-
-​     ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nFB)=c(0.38,0.65,2.4,0.91,0.86,0.8))
-
- 
-
+     ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nFB)=c(0.38,0.65,2.4,0.91,0.86,0.8))
 }
+```
 
 ## 模型4：包含协变量的最终模型
 
@@ -443,107 +354,61 @@ test(){
 
 ### PML代码
 
+```R
 test(){
 
- 
-
 covariate(tt)
-
 fcovariate(TOCI1T)
-
 fcovariate(STERSTT)
 
- 
-
 t1_TOC_OR_Tmax=min(TOCI1T,Tmax)
-
 t1_STE_OR_Tmax=min(STERSTT,Tmax)
-
 t2_TOC_OR_Tmax=min(TOCI1T,Tmax)
-
 t2_STE_OR_Tmax=min(STERSTT,Tmax)
-
- 
-
 t1=TOCI1T<=STERSTT?t1_TOC_OR_Tmax:t1_STE_OR_Tmax
-
 t2=TOCI1T<=STERSTT?t2_STE_OR_Tmax:t2_TOC_OR_Tmax
 
 F1=TOCI1T<=STERSTT?Ftoci:Fster
-
 F2=TOCI1T<=STERSTT?Fster:Ftoci
 
- 
-
 rho=log(fold_x)/Tmax
-
 R0=Cmax/exp(rho*Tmax)
-
 R1=R0*exp(rho*t1)
-
 R2=R1*exp(F1*rho*(t2-t1))
-
 CmaxAdjust=R2*exp(F1*F2*rho*Tmax-t2)
 
- 
-
 AA=(1-FB)*CmaxAdjust
-
 BB=FB*CmaxAdjust
-
- 
 
 E=tt<0?R0:tt<t1?R0*exp(rho*tt):tt<t2?R1*exp(F1*rho*(tt-t1)):tt<Tmax?R2*exp(F1*F2*rho*(tt-t2)):AA*exp(-alpha*(tt-Tmax)) + BB*exp(-beta*(tt-Tmax))
 
-\#observe(Eobs(tt)=log(E)+CEps)
+    \#observe(Eobs(tt)=log(E)+CEps)
 
 observe(Eobs(tt)=E*exp(CEps))
 
 error(CEps = 0.56)
 
- 
-
 stparm(Tmax=tvTmax*exp(nTmax))
-
 stparm(Cmax=tvCmax*exp(nCmax))
-
 stparm(fold_x=tvfold_x*exp(nfold_x))
-
 stparm(alpha=tvAlpha*exp(nAlpha))
-
 stparm(beta=tvBeta*exp(nBeta))
-
 stparm(FB=tvF_b*exp(nF_b))
-
 stparm(Ftoci=tvFtoci)
-
 stparm(Fster=tvFster)
 
- 
-
 fixef(tvTmax=c(,9.3,))
-
 fixef(tvCmax=c(,24000,))
-
 fixef(tvfold_x=c(,3900,))
-
 fixef(tvAlpha=c(,0.16,))
-
 fixef(tvBeta=c(,0.0032,))
-
 fixef(tvF_b=c(,0.0079,))
-
 fixef(tvFtoci=c(,1.2,))
-
 fixef(tvFster=c(,1,))
 
- 
-
 ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nF_b)=c(0.38,0.65,2.4,0.91,0.86,0.8))
-
- 
-
 }
+```
 
 ## 注意事项
 
@@ -579,45 +444,40 @@ ranef(diag(nTmax,nCmax,nfold_x,nAlpha,nBeta,nF_b)=c(0.38,0.65,2.4,0.91,0.86,0.8)
 
 # 讨论：
 
-模型1：基础模型
+**模型1：基础模型**
 
-优点：非常清晰的模型解析表达式，可以很好的描述曲线特征
+- 优点：非常清晰的模型解析表达式，可以很好的描述曲线特征
 
-缺点：模型的参数是一些纯粹的数学参数，没有直观的生理意义，模型参数较多。
+- 缺点：模型的参数是一些纯粹的数学参数，没有直观的生理意义，模型参数较多。
 
-参数数量：7
+- 参数数量：7
 
-参数：R0，ρ，Tmax， α，β，A，B，
+- 参数：R0，ρ，Tmax， α，β，A，B，
 
- 
 
-模型2：一种半机制模型
+**模型2：一种半机制模型**
 
-优点：采用了一种假说，可以通过直观的结构示意图展示出模型，以及参数的含义，并且参数更少
+- 优点：采用了一种假说，可以通过直观的结构示意图展示出模型，以及参数的含义，并且参数更少
 
-缺点：是微分方程形式，不是解析表达式
+- 缺点：是微分方程形式，不是解析表达式
 
-参数数量：6
+- 参数数量：6
 
-参数：E0，ρ，Tmax， α，β，k
+- 参数：E0，ρ，Tmax， α，β，k
 
- 
 
-模型3：重新参数化的基础模型
+**模型3：重新参数化的基础模型**
 
-优点：通过“模型2”重新对“模型1”参数化，使获得参数有生理意义，并且具有解析表达式
+- 优点：通过“模型2”重新对“模型1”参数化，使获得参数有生理意义，并且具有解析表达式
 
-缺点：
+- 缺点：
 
-参数数量：6
+- 参数数量：6
 
-参数：Cmax，flod_x，Tmax， α，β，FB
+- 参数：Cmax，flod_x，Tmax， α，β，FB
 
- 
 
 **我对这个案例的耐心耗尽了，不想再投入更多的时间去组织素材、优化语言表达了，此案例看起来可能很痛苦，就这样吧。**
-
- 
 
 # 小结：
 
