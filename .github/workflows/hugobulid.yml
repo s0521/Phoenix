@@ -28,6 +28,6 @@ jobs:
             - name: Deploy Web
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
                   EXTERNAL_REPOSITORY: s0521/s0521.github.io
                   PUBLISH_BRANCH: master
