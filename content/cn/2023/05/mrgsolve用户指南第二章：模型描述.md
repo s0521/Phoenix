@@ -14,6 +14,8 @@ typora-root-url: ../../../../static/
 
 标题：mrgsolve用户指南第二章：模型描述
 
+<!--toc-->
+
 # 2 模型指定
 
 本章详细介绍了mrgsolve模型描述文件(model specification)【译者注：类似于NONMEM的控制文件，Phoenix的PML语言】的格式。
@@ -1474,7 +1476,7 @@ mod@envir
 
 ### 2.3.2"TIME"
 
-给出当前数据集记录中的时间。这通常仅用于"`$MAIN`"或"`$TABLE`"。"TIME"是"self. time"的别名。与"SOLVERTIME"形成对比。
+给出当前数据集记录中的时间。这通常仅用于"`$MAIN`"或"`$TABLE`"。"TIME"是"self.time"的别名。与"SOLVERTIME"形成对比。
 
 ### 2.3.3"SOLVERTIME"
 
@@ -1502,7 +1504,7 @@ mod@envir
 
 - 8=替换
 
-"EVID"是"self. evid"的别名。
+"EVID"是"self.evid"的别名。
 
 ### 2.3.6"CMT"
 
@@ -1520,13 +1522,13 @@ if(CMT==2) {
 
 在该示例中，"GUT"、"CENT"和"PERIPH"是各自房室中的量，而"CMT"是指数据记录/数据集中的"CMT"值。
 
-"CMT"是"self. cmt"的别名。
+"CMT"是"self.cmt"的别名。
 
 ### 2.3.7"AMT"
 
 "AMT"是剂量药量的当前值。
 
-"AMT"是"self. amt"的别名。
+"AMT"是"self.amt"的别名。
 
 ### 2.3.8"NEWIND"
 
@@ -1550,7 +1552,7 @@ if(NEWIND <=1) {
 }
 ```
 
-"NEWIND"是"self. newind"的别名。
+"NEWIND"是"self.newind"的别名。
 
 ### 2.3.9"SS_ADVANCE"
 
@@ -1596,7 +1598,7 @@ simeta();
 
 -  self.stop_id()
 
--  self. stop_id_cf()
+-  self.stop_id_cf()
 
 "self"数据成员包括
 
@@ -1620,7 +1622,7 @@ simeta();
 
 - self.nrow
 
-- self. envir(见下面的注释)
+- self.envir(见下面的注释)
 
 提供此信息是为了透明，并非详尽无遗。我们通过具有更简单名称的预处理器指令为这些数据项提供接口(例如"EVID"将转换为"self.evid")，并鼓励用户使用更简单的API名称。
 
@@ -1663,7 +1665,7 @@ if(EVID==1) {
 
 ### 2.3.17 "self.idn"
 
-当前的ID号。数字从0开始，增加1到"self. nid-1"。因此，如果要测试输出数据集中的最后一个ID，您将编写：
+当前的ID号。数字从0开始，增加1到"self.nid-1"。因此，如果要测试输出数据集中的最后一个ID，您将编写：
 
 ```R
 [ table ]
@@ -1673,7 +1675,7 @@ if(self.idn == (self.nid-1)) {
 }
 ```
 
-### 2.3.18"self. nrow"
+### 2.3.18"self.nrow"
 
 输出数据集中的总行数。
 
@@ -1722,7 +1724,7 @@ double TAD = self.tad();
 
 这是一个创建建模偶数时间的函数。唯一的参数是当前个体未来的数字时间，它指示何时应该在模拟中包含不连续性。
 
-当调用"self. mtime()"时，一个新的记录被添加到当前个人的记录集中，"EVID"设置为2。这意味着当系统前进到这个记录(这次)时，微分方程求解器将重置并重新启动，从而产生不连续性。该函数返回这个事件的时间，以便用户可以在后续代码中使用它。
+当调用"self.mtime()"时，一个新的记录被添加到当前个人的记录集中，"EVID"设置为2。这意味着当系统前进到这个记录(这次)时，微分方程求解器将重置并重新启动，从而产生不连续性。该函数返回这个事件的时间，以便用户可以在后续代码中使用它。
 
 比如说，
 
@@ -1740,7 +1742,7 @@ if(TIME >= mt1) KA = 2.1;
 
 ### 2.3.23 self.mevent(\<time\>, \<evid\>)
 
-与"self. mtime()"([第2.3.22节](https://mrgsolve.org/user-guide/specification.html#seCLself.mtime))相关，除了您可以为此干预设置特定的"EVID"，并且您可以通过"EVID"而不是时间跟踪更改时间。如果您想在未来锚定多个事件并确保能够区分它们，您可以使用它。示例：
+与"self.mtime()"([第2.3.22节](https://mrgsolve.org/user-guide/specification.html#seCLself.mtime))相关，除了您可以为此干预设置特定的"EVID"，并且您可以通过"EVID"而不是时间跟踪更改时间。如果您想在未来锚定多个事件并确保能够区分它们，您可以使用它。示例：
 
 ```R
 [ main ] 
@@ -1762,15 +1764,15 @@ self.mevent(change_point2, 34);
 
 当当前个体达到某种条件，表明其余输出无关紧要或该特定个体有问题时，可以调用此项。
 
-另请参见"self.stop_id()"和"self. stop()"。
+另请参见"self.stop_id()"和"self.stop()"。
 
-### 2.3.26"self. stop_id_cf()"
+### 2.3.26"self.stop_id_cf()"
 
 可以从"`$PREAMBLE`"、"`$MAIN`"和"`$TABLE`"调用此"self"函数。调用此函数时，停止当前个体的处理，并将当前值结转("cf", carried forward)用于该个体的剩余输出记录。
 
 当当前个体达到某种条件，表明其余输出无关紧要或该特定个体有问题时，可以调用此项。
 
-另请参见"self.stop_id_cf()"和"self. stop()"。
+另请参见"self.stop_id_cf()"和"self.stop()"。
 
 ### 2.3.27"THETA(n)"
 
