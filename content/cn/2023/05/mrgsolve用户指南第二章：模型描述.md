@@ -1823,7 +1823,7 @@ $TABLE
 double STD = sqrt(SIGMA(1) + pow(F,2)*SIGMA(2));
 ```
 
-### 2.3.31 table(\name\>)
+### 2.3.31 table(\<name\>)
 
 此宏已被弃用。用户不应使用如下的代码：
 
