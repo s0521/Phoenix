@@ -11,7 +11,7 @@ googleAnalytics = "UA-138584476-1"
 
 [params]
   description = "Personal website of Yongchao Fu; 付永超的个人网站"
-  footer = "&copy; [Yongchao Fu](https://s0521.github.io/) 2019 - 2020"
+  footer = "&copy; [Yongchao Fu](https://s0521.github.io/) 2019 - 2023"
   disqusURL = "https://s0521.github.io/"
   AuthorName = "Yongchao Fu"
   GitHubUser = "s0521"
