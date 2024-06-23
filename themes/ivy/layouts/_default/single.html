@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 
-
-{{(replaceRE "<!--\\s*[t|T][o|O][c|C]\\s*-->" .TableOfContents .Content)| safeHTML}}
+{{(replaceRE "(\\[TOC\\]|<!--\\s*[t|T][o|O][c|C]\\s*-->)" .TableOfContents .Content)| safeHTML}}
 
 {{ partial "footer.html" . }}

@@ -11,7 +11,7 @@ googleAnalytics = "UA-138584476-1"
 
 [params]
   description = "Personal website of Yongchao Fu; 付永超的个人网站"
-  footer = "&copy; [Yongchao Fu](https://s0521.github.io/) 2019 - 2023"
+  footer = "&copy; [Yongchao Fu](https://s0521.github.io/) 2019 - 2024"
   disqusURL = "https://s0521.github.io/"
   AuthorName = "Yongchao Fu"
   GitHubUser = "s0521"
@@ -22,7 +22,7 @@ googleAnalytics = "UA-138584476-1"
   logo = {img = "/images/logo.png" , url = "/" , alt = "Yongchao Fu" , tag = ""}
   lang = {edit = {cn = "编辑"}, license ={cn = "版权"}, subscribe = {cn = "订阅"}}
   githubContentURL = "https://github.com/s0521/Phoenix/edit/master/content/"
-  customJS = [ "js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js"]
+  #customJS = [ "js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js"]
   #customJS = {js/fix-toc.js, js/center-img.js, js/right-quote.js, js/no-highlight.js, js/fix-footnote.js, js/math-code.js, js/external-link.js, js/alt-title.js, js/header-link.js }
   
   highlightjsVersion = "9.12.0"
@@ -30,6 +30,7 @@ googleAnalytics = "UA-138584476-1"
   highlightjsLang = ["R", "r", "yaml", "tex", "vbnet", "SAS", "sas"]
   #highlightjsTheme = "github-gist"
   highlightjsTheme = "github"
+  math = true
   
   enableGitalk = true
 [params.gitalk]
@@ -42,7 +43,23 @@ googleAnalytics = "UA-138584476-1"
   posts = "/:year/:month/:slug/"
   cn = "/cn/:year/:month/:slug/"
   en = "/en/:year/:month/:slug/"
- 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+    [markup.goldmark.renderer]
+      unsafe = true
+  
+
 [menu]
   [[menu.main]]
     name = "About"
