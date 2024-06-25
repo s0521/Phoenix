@@ -12,20 +12,27 @@ typora-root-url: ../../../../static/
 
 基于首次假说，存在以下公式
 
+$$ C*R/RC=Kd $$
+
 $$
-C*R/RC=Kd \\\\
+\begin{align}
+Rt&=R+RC \\
+Ct&=C+RC \\
+\end{align}
 $$
+
 $$
-Rt=R+RC \\\\
-Ct=C+RC \\\\
+\begin{align}
+RO&=RC/Rt\\
+RO&=C/(C+Kd)
+\end{align}
 $$
+
 $$
-RO=RC/Rt\\\\
-RO=C/(C+Kd)\\\\
-$$
-$$
-CO=RC/Ct\\\\
-CO=R/(R+Kd)
+\begin{align}
+CO&=RC/Ct\\
+CO&=R/(R+Kd)
+\end{align}
 $$
 
 
@@ -64,8 +71,10 @@ $$
 **可知**
 
 $$
-RO1/RO2=(RC1/Rt)/(RC2/Rt)\\\\
-RO1/RO2=RC1/RC2
+\begin{align}
+RO1/RO2 &=(RC1/Rt)/(RC2/Rt) \\
+RO1/RO2&=RC1/RC2
+\end{align}
 $$
 
 
@@ -75,35 +84,39 @@ $$
 
 此处令**X为RO的比值，即**
 
-$X=RO1/RO2$  ①
+$$
+X=RO1/RO2 \tag{1}
+$$
 
-$X=RO1/RO2=RC1/RC2$ 
+$$
+X=RO1/RO2=RC1/RC2
+$$
 
  
 
 又已知
 
-$RO=C/(C+Kd)$ ②
-
+$$
+RO=C/(C+Kd) \tag{2}
+$$
 即
+$$
+RO1/RO2= \frac{C1/(C1+Kd)}{C2/(C2+Kd) }\tag{3}
+$$
 
-$RO1/RO2=( C1/(C1+Kd) )/( C2/(C2+Kd) )$③
-
- 
 
 则将③带入①可得
 
 $$
-X=( C1/(C1+Kd) )/( C2/(C2+Kd) )
-$$
-
-`$$\begin{align}
+\begin{align}
+X &=\frac{C1/(C1+Kd)}{C2/(C2+Kd)}\\
 C1/( C1+Kd ) &= X*C2 / ( C2+Kd ) \\
 C1*C2 + C1*Kd& = X*C1*C2 + X*C2*Kd \\
 C1*Kd - X*C2*Kd &= X*C1*C2 - C1*C2 \\
 Kd*( C1 - X*C2 ) &= C1*C2( X-1 ) \\
-Kd &= C1*C2*( X-1 ) / ( C1 - X*C2 )  ④
-\end{align}$$`
+Kd &= C1*C2*( X-1 ) / ( C1 - X*C2 )  
+\end{align} \tag{4}
+$$
 由此就可以基于已有得观测数据计算Kd了
 
 因为$X=RC1/RC2$，可以由$Rt-R$计算出
@@ -172,29 +185,24 @@ Kd &= C1*C2*( X-1 ) / ( C1 - X*C2 )  ④
 
 得到上述结论后，我就很兴奋的又推算了下，在已知Rt、Kd时，不同的CO百分比对应的Ct和C的数值，最终也推断得到了，推断过程如下：
 
-由
-
-`$$
-Ctot*Rtot-(Ctot+Rtot)*RC +RC^2 =RC*KD
-$$`
-
-得
-
-$Ctot = RC*( Rtot+KD-RC )/( Rtot-RC )$ ①
-
-又有
+由$Ctot*Rtot-(Ctot+Rtot)*RC +RC^2 =RC*KD$得
 
 $$
-RC = Rtot - KD*( 1/[ (1-CO) / CO] ) -RC )
+Ctot = RC*( Rtot+KD-RC )/( Rtot-RC ) \tag{1}
 $$
-令$Y = 1/[ (1-CO)/CO ]$ ②，
+
+又有$RC = Rtot - KD*( 1/[ (1-CO) / CO] ) -RC )$
+令
+$$
+Y = 1/[ (1-CO)/CO ]  \tag{2}
+$$
 
 则
-
-$RC = Rtot - KD*Y$ ③
+$$
+RC = Rtot - KD*Y \tag{3}
+$$
 
 将③带入①得
-
 $$
 Ctot = Rt*( 1+1/Y) - KD*( 1+Y)
 $$
@@ -226,7 +234,7 @@ $$
 
 具体推到极限值是可以推导得，我没有推到，取以下作为近似
 
-$CO极限≈1-Kd/Ct$
+$CO_{极限}≈1-Kd/Ct$
 
 即当前得表格中得CO极限约为，$1-1/14≈93.2 \%$
 
