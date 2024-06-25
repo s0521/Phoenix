@@ -12,7 +12,9 @@ typora-root-url: ../../../../static/
 
 基于首次假说，存在以下公式
 
-$$ C*R/RC=Kd $$
+$$
+C*R/RC=Kd
+$$
 
 $$
 \begin{align}
