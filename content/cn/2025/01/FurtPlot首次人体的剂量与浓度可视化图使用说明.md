@@ -10,7 +10,7 @@ typora-root-url: ../../../../static/
 
 First in hUman dose and concentRaTion plot，Furt Plot，首次人体的剂量与浓度可视化图。
 
-<!---toc--->
+[TOC]
 
 # 使用前需要准备的数据与信息：
 
