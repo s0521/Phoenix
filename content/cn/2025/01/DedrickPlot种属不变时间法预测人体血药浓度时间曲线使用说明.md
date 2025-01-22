@@ -6,8 +6,6 @@ typora-root-url: ../../../../static/
 
 ---
 
-typora-root-url: ../../../../static/
-
 ---
 
 # 工具名称：Dedrick Plot
