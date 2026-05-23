@@ -48,6 +48,27 @@ Phoenix产品经理，源资信息科技（上海）有限公司；
 
 - [guiplot](/guiplot/about/), 一个R语言的程序包
 
+## Rshiny应用：
+
+我创建并维护的：
+
+- [ERAT](https://s0521.shinyapps.io/ERAT/):ER分析：用于早期临床研究暴露-反应数据建模分析与协变量搜索的分析工具。
+- [cqt_eda](https://s0521.shinyapps.io/cqt_eda/):C-QT分析：用于浓度-心电图QT间期(C-QT)间相关性建模分析的探索性分析工具。
+
+## 网页(Javascript)应用:
+
+我创建并维护的：
+
+- [furt](https://furt.netlify.app/):首次人体试验相关浓度可视化图。
+- [hedv](https://hedv.netlify.app/):基于指南方法的人体等效剂量计算。
+- [dedireck](https://dedrickplot.netlify.app/):动物药时曲线变换为人体药时曲线，dedireck图与逆dedireck图。
+- [ConcToDose](https://conctodose.netlify.app/):由浓度到剂量，基于部分PK参数实现由浓度估计剂量。
+- [Conc+Model→Dose](https://concmodeldose.netlify.app/):由浓度到剂量，基于PK模型实现由浓度估计剂量。
+
+## 插件：
+
+- [nonmem_cn](https://github.com/s0521/nonmem_cn)：一个[Visual Studio Code](https://code.visualstudio.com/)的插件，实现了**NONMEM**代码的一些基础的**语言功能**（语法高亮、自动补全等）。
+
 # 技能
 
 掌握Phoenix WinNonlin，Phoenix NLME，Phoenix IVIVC，R，SAS，NONMEM，Excel VBA等软件的使用。

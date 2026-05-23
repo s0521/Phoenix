@@ -45,7 +45,30 @@ I also made some Phoenix cases published on the company's website, such as:
 
 I’m the creator and main author of:
 
-- [guiplot](/guiplot/about/):a user-friendly plotting aids based on graphical interface in R
+- [guiplot](/guiplot/about/): a user-friendly plotting aids based on graphical interface in R
+
+## R shiny:
+
+  I’m the creator and main author of:
+
+  - [ERAT](https://s0521.shinyapps.io/ERAT/): ER analysis: used in the study of early clinical exposure - response data modeling analysis and analysis of covariate search tool.
+- [cqt_eda](https://s0521.shinyapps.io/cqt_eda/): C-QT analysis: used for modeling and analyzing the concentration–electrocardiogram QT interval (C-QT) correlation.
+
+## Website(Javascript):
+
+  I’m the creator and main author of:
+
+  - [furt](https://furt.netlify.app/): Visualization plots of concentrations related to first-in-human trials.
+- [hedv](https://hedv.netlify.app/): Human equivalent dose calculations based on guideline methods.
+- [dedireck](https://dedrickplot.netlify.app/): Transformation of animal pharmacokinetic curves to human pharmacokinetic curves, including dedireck and inverse dedireck plots.
+- [ConcToDose](https://conctodose.netlify.app/): From concentration to dose, estimation of dose based on some PK parameters.
+- [Conc+Model→Dose](https://concmodeldose.netlify.app/): From concentration to dose, estimation of dose based on PK models.
+
+## Extension:
+
+  I’m the creator and main author of:
+
+  - [nonmem_cn](https://github.com/s0521/nonmem_cn)：A [Visual Studio Code](https://code.visualstudio.com/) extension that implements some basic language features of NONMEM code (syntax highlighting, auto-completion, etc.).
 
 # Phoenix case in Chinese
 * [Phoenix (WinNonlin NLME IVIVC toolkit) Q&A](http://www.tri-ibiotech.com.cn/Appofcase/n607.html)
